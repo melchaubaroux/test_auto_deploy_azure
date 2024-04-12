@@ -1,0 +1,6 @@
+*.csv
+*.pickle
+.git
+.gitattributes
+__python__
+crap_and_test
