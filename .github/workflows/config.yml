@@ -40,12 +40,10 @@ jobs:
 
 
       - name: Build and push Docker image
-        run: |
-          cd ./back
+        run: |        
           docker tag ajax_back b15ajaxmc.azurecr.io/back
           docker push b15ajaxmc.azurecr.io/back
 
-          cd ../front
           docker tag ajax_front b15ajaxmc.azurecr.io/front
           docker push b15ajaxmc.azurecr.io/front
         
