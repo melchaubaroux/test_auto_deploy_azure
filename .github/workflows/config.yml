@@ -11,10 +11,10 @@ jobs:
     
     steps:
 
-    
+
     - name: run test
       run: |
-        pytest test
+        pytest test/*
 
 
     - name: Checkout code
