@@ -43,12 +43,12 @@ jobs:
         run: | 
           # docker build --platform=local -o . git://github.com/melchaubaroux/test_auto_deploy_azure
           # docker build -t b15_back . 
-          docker push ghcr.io/melchaubaroux/ajax_back
+          # docker push ghcr.io/melchaubaroux/ajax_back
           docker tag b15_back b15ajaxmc.azurecr.io/back
           docker push b15ajaxmc.azurecr.io/back
 
           # docker build --platform=local -o . git://github.com/melchaubaroux/test_auto_deploy_azure
-          docker build -t b15_front . 
+          # docker build -t b15_front . 
           docker tag b15_front b15ajaxmc.azurecr.io/front
           docker push b15ajaxmc.azurecr.io/front
         
