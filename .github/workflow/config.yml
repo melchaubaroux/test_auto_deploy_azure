@@ -16,7 +16,7 @@ jobs:
     - name: Login to Azure
       uses: azure/login@v1
       with:
-        creds: ${{Azure_register_password}}
+        creds: ${{secrets.Azure_register_password}}
 
     # - name: creation d'un registre de container
     #  run: |
@@ -31,9 +31,6 @@ jobs:
     - name: run test
       run: |
       pytest test/
-
-
-
 
 
     - name: Build and push Docker image
