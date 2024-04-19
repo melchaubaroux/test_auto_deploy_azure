@@ -25,7 +25,15 @@ jobs:
     # - name: recuperation du mot de passe
     #  run: |
 
+
     #   az acr credential show --name b15ajaxmc
+
+    - name: run test
+      run: |
+      pytest test/
+
+
+
 
 
     - name: Build and push Docker image
