@@ -11,10 +11,6 @@ jobs:
     
     steps:
 
-
-
-
-
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -29,7 +25,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: ${{secrets.Azure_register_password}}
+          creds: ${{secrets.Azure_CREDENTIALS}}
 
       # - name: creation d'un registre de container
       #  run: |
