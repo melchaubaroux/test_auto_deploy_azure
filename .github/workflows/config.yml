@@ -10,6 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+
+    
+    - name: run test
+      run: |
+        pytest test
+
+
     - name: Checkout code
       uses: actions/checkout@v2
       
@@ -28,9 +35,6 @@ jobs:
 
     #   az acr credential show --name b15ajaxmc
 
-    - name: run test
-      run: |
-        pytest test
 
 
     - name: Build and push Docker image
