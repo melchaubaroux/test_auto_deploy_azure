@@ -30,7 +30,7 @@ jobs:
 
     - name: run test
       run: |
-      pytest test/
+      pytest test
 
 
     - name: Build and push Docker image
