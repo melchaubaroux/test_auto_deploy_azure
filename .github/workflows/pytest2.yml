@@ -1,0 +1,30 @@
+name: Run pytest
+
+on:
+  push:
+    branches:
+      - main  # Modifier cette ligne en fonction de votre branche principale
+  pull_request:
+    branches:
+      - main  # Modifier cette ligne en fonction de votre branche principale
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11.8  # Spécifiez la version de Python que vous utilisez
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Assurez-vous d'adapter cette commande à votre configuration
+
+    - name: Run tests with pytest
+      run: pytest
