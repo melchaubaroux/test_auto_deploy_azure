@@ -27,4 +27,4 @@ jobs:
         pip install -r requirements.txt  # Assurez-vous d'adapter cette commande à votre configuration
 
     - name: Run tests with pytest
-      run: pytest
+      run: pytest test/*
