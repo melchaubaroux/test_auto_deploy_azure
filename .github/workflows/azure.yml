@@ -48,7 +48,7 @@ jobs:
       - name: Deploy to Azure Container Instances front 
        
         run: |
-          az container create --resource-group ChaubarouxMel --name mel-ajax-front --image b15ajaxmc.azurecr.io/b15_front --dns-name-label mel-ajax-front --ports 7000 --registry-username ${{secrets.AZURE_REGISTER_PASSWORD}} --registry-password ${{secrets.AZURE_REGISTER_USER}}
+          az container create --resource-group ChaubarouxMel --name mel-ajax-front --image b15_front --dns-name-label mel-ajax-front --ports 7000 --registry-username ${{secrets.AZURE_REGISTER_PASSWORD}} --registry-password ${{secrets.AZURE_REGISTER_USER}}
 
       - name: Deploy to Azure Container Instances back
         run: |
