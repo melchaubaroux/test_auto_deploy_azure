@@ -31,16 +31,20 @@ jobs:
 
 
 
-      - name: Build and push Docker image
+      - name: Build and push Docker image back 
+        working-directory : backend
         run: | 
-       
           docker build -t b15ajaxmc.azurecr.io/b15_back . 
           docker push b15ajaxmc.azurecr.io/b15_back 
-          
+
+      - name: Build and push Docker image back 
+        working-directory : frontend
+        run: | 
           docker build -t b15ajaxmc.azurecr.io/b15_front . 
           docker push b15ajaxmc.azurecr.io/b15_front 
         
       - name: Deploy to Azure Container Instances front 
+       
         run: |
           az container create \
           --resource-group ChaubarouxMel \
