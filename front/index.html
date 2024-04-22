@@ -37,7 +37,7 @@
 
         async function display (selectedModel){
             
-            const adresse = `http://ajax-mel-back.amangnhng4dxd0eu.francecentral.azurecontainer.io`
+            const adresse = `http://mel-b15-back.francecentral.azurecontainer.io`
       
             var image = await fetch(`${adresse}:8000/model/${selectedModel}`);
             var metric = await fetch(`${adresse}:8000/metric/${selectedModel}`).then(response=> {return response.text()});
