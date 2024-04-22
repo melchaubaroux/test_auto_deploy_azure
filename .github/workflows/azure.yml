@@ -54,8 +54,8 @@ jobs:
           --image b15ajaxmc.azurecr.io/front \
           --dns-name-label mel-ajax-front \
           --ports 7000 \
-          #  --registry-username ${{secrets.Azure.register.user}} \
-          #  --registry-password ${{secrets.Azure.register.password}}
+          --registry-username ${{secrets.Azure.register.user}} \
+          --registry-password ${{secrets.Azure.register.password}}
 
       - name: Deploy to Azure Container Instances back
         run: |
@@ -65,8 +65,8 @@ jobs:
           --image b15ajaxmc.azurecr.io/back \
           --dns-name-label mel-ajax-back \
           --ports 8000 \
-          #  --registry-username ${{secrets.Azure_register_user}} \
-          #  --registry-password ${{secrets.Azure_register_password}}
+          --registry-username ${{secrets.Azure_register_user}} \
+          --registry-password ${{secrets.Azure_register_password}}
       
       
           
