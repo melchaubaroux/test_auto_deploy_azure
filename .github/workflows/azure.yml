@@ -29,7 +29,9 @@ jobs:
 
       #   az acr credential show --name b15ajaxmc
 
-
+      - name : connection to register
+        run  : |
+          az acr login -n b15ajaxmc
 
       - name: Build and push Docker image back 
         working-directory : backend
