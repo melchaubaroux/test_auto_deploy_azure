@@ -39,8 +39,8 @@ jobs:
           docker build -t b15ajaxmc.azurecr.io/b15_back . 
           docker push b15ajaxmc.azurecr.io/b15_back 
 
-      - name: Build and push Docker image back 
-        working-directory : frontend
+      - name: Build and push Docker image front
+        working-directory : front
         run: | 
           docker build -t b15ajaxmc.azurecr.io/b15_front . 
           docker push b15ajaxmc.azurecr.io/b15_front 
